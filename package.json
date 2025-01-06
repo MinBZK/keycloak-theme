@@ -1,0 +1,18 @@
+{
+  "name": "keycloak-theme-nl-design-system",
+  "version": "1.0.0",
+  "description": "We bouwen hier een keycloak template met het NL design system.",
+  "scripts": {
+    "build": "jar --create --file output/keycloak-nl-design-system.jar theme/ META-INF/",
+    "compile": "webpack --config webpack.config.js"
+  },
+  "author": "",
+  "devDependencies": {
+    "@nl-rvo/assets": "1.0.0-alpha.360",
+    "@nl-rvo/component-library-css": "4.0.0",
+    "@nl-rvo/design-tokens": "1.6.2",
+    "copy-webpack-plugin": "^12.0.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

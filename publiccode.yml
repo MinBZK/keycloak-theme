@@ -1,0 +1,33 @@
+publiccodeYmlVersion: "0.2"
+categories:
+  - it-development
+description:
+  en:
+    features:
+      - Open Source
+      - keycloak
+      - Government
+    genericName: keycloak-theme
+    longDescription: |
+      Keycloak theme customized  with NL Design System
+
+    shortDescription: Keycloak theme customized  with NL Design System
+developmentStatus: concept
+legal:
+  license: EUPL-1.2
+localisation:
+  availableLanguages:
+    - en
+    - nl
+  localisationReady: false
+maintenance:
+  contacts:
+    - name: Mijn Bureau
+      email: opensource@minbzk.nl
+  type: community
+name: keycloak-theme
+platforms:
+  - docs
+releaseDate: "2025-01-01"
+softwareType: standalone/web
+url: "https://github.com/MinBZK/keycloak-theme"

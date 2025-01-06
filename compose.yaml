@@ -1,0 +1,16 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:25.0.1
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - 8080:8080
+    command:
+        - start-dev
+        - --spi-theme-static-max-age=-1
+        - --spi-theme-cache-themes=false
+        - --spi-theme-cache-templates=false
+        - --spi-theme-welcome-theme=nl-design-system
+    volumes:
+      - ./theme/nl-design-system:/opt/keycloak/themes/nl-design-system

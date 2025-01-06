@@ -1,0 +1,6 @@
+services:
+  devcontainer:
+    image: 	mcr.microsoft.com/devcontainers/java:11
+    volumes:
+      - ..:/workspace:cached
+    command: ["sleep", "infinity"]

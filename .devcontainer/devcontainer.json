@@ -1,0 +1,38 @@
+{
+  "name": "keycloak-theme",
+  "dockerComposeFile": ["../compose.yaml", "compose.yaml"],
+  "service": "devcontainer",
+  "shutdownAction": "stopCompose",
+  "workspaceFolder": "/opt/keycloak/themes/",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "v20.16.0"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "editorconfig.editorconfig",
+        "streetsidesoftware.code-spell-checker",
+        "redhat.vscode-yaml",
+        "mhutchie.git-graph",
+        "dcortes92.freemarker"
+      ],
+      "settings": {
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.renderWhitespace": "boundary",
+        "files.trimTrailingWhitespace": true,
+        "terminal.integrated.inheritEnv": true,
+        "debug.toolBarLocation": "commandCenter",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/usr/bin/bash"
+          }
+        },
+        "terminal.integrated.defaultProfile.linux": "bash",
+      }
+    }
+  }
+}
