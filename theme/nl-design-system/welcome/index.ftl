@@ -157,7 +157,7 @@
 
             <p>
             Zodra u weet in welke realm u zich moet aanmelden kunt u naar de inlog url gaan. Een voorbeeld hiervan is:
-            "http://localhost:8080/realms/uwrealm/account" waarbij u uwrealm vervangt door de naam van uw realm.
+            "${.data_model.baseUrl}/realms/uwrealm/account" waarbij u uwrealm vervangt door de naam van uw realm.
             </p
 
         </#if>
