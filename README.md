@@ -58,10 +58,15 @@ In de templates kunnen omgevings variablen omgezet worden naar text. We gebruike
 Om een indruk te geven van de template worden er wat screenshots beschikbaar gesteld
 
 ### Welkom pagina
+
 ![Welkom pagina 1](assets/welkom-setup.png)
 ![Welkom pagina 2](assets/welkom-toegang.png)
 ![Welkom pagina 3](assets/welkom-maak-gebruiker.png)
 
 ### Login pagina
+
+![Login pagina 1](assets/login.png)
+![Login pagina 1](assets/login-taal.png)
+![Login pagina 1](assets/login-error.png)
 
 ### Account pagina

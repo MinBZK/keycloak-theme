@@ -1,6 +1,6 @@
 {
     "themes": [{
         "name" : "nl-design-system",
-        "types": [ "login", "account" ]
+        "types": [ "login", "account", "welcome", "common" ]
     }]
 }
