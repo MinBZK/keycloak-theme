@@ -17,7 +17,7 @@
       </#list>
     </#if>
   </head>
-<body class="rvo-theme amt-theme">
+<body class="rvo-theme">
   <header class="rvo-header">
     <div class="rvo-header__logo-wrapper">
       <a href="#" class="rvo-header__logo-link rvo-link rvo-link--no-underline">
@@ -54,25 +54,21 @@
   </header>
 
   <div class="rvo-topnav__background rvo-topnav__background--horizontal-rule">
-    <div
-      class="rvo-max-width-layout rvo-max-width-layout--md rvo-min-width-layout--md rvo-max-width-layout-inline-padding--none"
-    >
       <nav class="rvo-topnav rvo-topnav--md">
         <ul class="rvo-topnav__list">
-          <li class="rvo-topnav__item">
+          <li class="rvo-topnav__item" style="margin-inline-start: var(--rvo-space-md);">
             <a class="rvo-link rvo-topnav__link rvo-link--logoblauw" href="${adminUrl}">
+              <span class="utrecht-icon rvo-icon rvo-icon-man-met-laptop rvo-icon--md rvo-icon--wit" role="img" aria-label="Home"></span>
               Admin Console
             </a>
           </li>
         </ul>
       </nav>
-    </div>
   </div>
 
-  <div class="rvo-sidebar-layout__content">
   <div class="rvo-layout-column rvo-layout-gap--3xl">
     <div class="rvo-layout-column rvo-layout-gap--xl">
-      <main class="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
+      <main class="rvo-max-width-layout rvo-max-width-layout--sm rvo-min-width-layout--sm rvo-max-width-layout-inline-padding--sm">
         <#if adminConsoleEnabled && (bootstrap || successMessage?has_content)>
           <#if localUser>
           <h1 class="utrecht-heading-1">Maak een administrative gebruiker</h1>
@@ -147,7 +143,7 @@
             </#if>
           </#if>
         <#else>
-          <h1 class="utrecht-heading-1">Welkom</h1>
+          <h1 class="utrecht-heading-1 rvo-layout-row rvo-layout-gap--sm">Welkom</h1>
            <p class="rvo-text--lg">
               Dit is een Identity Service. Via deze identity service kan u inloggen op verschillende applicaties.
             </p>
@@ -163,7 +159,6 @@
         </#if>
       </main>
     </div>
-  </div>
   </div>
 </body>
 </html>

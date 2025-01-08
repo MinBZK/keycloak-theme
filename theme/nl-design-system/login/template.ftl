@@ -50,7 +50,7 @@
     </script>
 </head>
 
-<body class="rvo-theme rvo-responsive">
+<body class="rvo-theme">
 
   <header class="rvo-header">
     <div class="rvo-header__logo-wrapper">
@@ -84,9 +84,6 @@
 
   <div class="rvo-layout-column rvo-layout-gap--xl">
     <div class="rvo-topnav__background rvo-topnav__background--horizontal-rule">
-      <div
-        class="rvo-max-width-layout rvo-max-width-layout--lg rvo-min-width-layout--lg rvo-max-width-layout-inline-padding--none"
-      >
         <nav class="rvo-topnav rvo-topnav--lg">
           <ul class="rvo-topnav__list">
             <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
@@ -129,7 +126,6 @@
             </li>
           </ul>
         </nav>
-      </div>
     </div>
 
     <div class="rvo-layout-column rvo-layout-gap--3xl">
