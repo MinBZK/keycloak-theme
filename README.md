@@ -4,10 +4,7 @@
 ![Downloads](https://img.shields.io/github/downloads/MinBZK/keycloak-theme/total)
 ![License](https://img.shields.io/github/license/MinBZK/keycloak-theme)
 
-
-
-
-Dit is een keycloak theme template gebaseerd op het [NL design system](https://nldesignsystem.nl/) met de [ROOS](https://nl-design-system.github.io/rvo/docs/) implementatie.
+Dit is een keycloak theme gebaseerd op het [NL design system](https://nldesignsystem.nl/) met de [ROOS](https://nl-design-system.github.io/rvo/docs/) implementatie.
 
 ## Componenten
 
@@ -25,7 +22,7 @@ Verder heb je ook nog 'Common', dit zijn resources die gedeeld worden door all a
 
 Je kan de componenten die gebruikt worden selecteren per realm via het admin paneel, behalve de welkom pagina, Die moet ingesteld worden als de server opstart met de '--spi-theme-welcome-theme=nl-design-system' optie.
 
-## Bouwen
+## publiceren
 
 Om deze keycloak theme te bouwen kan men de volgende commandos uitvoeren. De commandos gaan er vanuit dat je [node](https://nodejs.org/en/download) en [java](https://www.azul.com/downloads/?package=jdk#zulu) geinstalleerd hebt.
 
@@ -70,3 +67,22 @@ Om een indruk te geven van de template worden er wat screenshots beschikbaar ges
 ![Login pagina 1](assets/login-error.png)
 
 ### Account pagina
+
+todo
+
+## Styling aanpassen
+
+Je kan zelf snel beginnen met het template aanpassen
+
+1. clone de repository met git
+2. zorg dat je [docker](https://www.docker.com/products/docker-desktop/) geinstalleerd hebt
+3. ga in de gecloonde folder staan en doe een `docker compose up` commando
+4. login op keycloak door naar localhost:8080 te gaan
+5. login met username:admin wachtwoord:admin
+6. ga naar `Realm settings`
+7. ga naar `Themes`
+8. pass het `Login theme` aan naar `nl-design-system`
+9. log uit
+10. run `npm install` om alle ROOS packages binnen te halen
+11. run `npm run compile`om alle ROOS packages in common te krijgen.
+13. nu zou je het theme moeten kunnen zien. als je iets aanpast in de thema/ folder zou de verandering direct zichtbaar moeten worden
