@@ -97,12 +97,18 @@
                         </p>
 
                         <div class="rvo-form-footer">
-                            <div id="kc-form-options" class="rvo-form-footer-item">
-                                <a href="${url.loginUrl}" class="rvo-link rvo-link--with-icon rvo-link--no-underline">
-                                    <span class="utrecht-icon rvo-icon rvo-icon-delta-naar-links rvo-icon--sm rvo-icon--hemelblauw rvo-link__icon--before" role="img" aria-label="Back"></span>
-                                    ${kcSanitize(msg("backToLogin"))}
+                          <div id="kc-form-options-container">
+                            <div id="kc-form-options">
+                              <span>
+                                <a tabindex="8" class="rvo-link rvo-link--with-icon rvo-link--no-underline" href="${url.loginUrl}">
+                                  <span class="utrecht-icon rvo-icon rvo-icon-delta-naar-links rvo-icon--sm rvo-icon--hemelblauw rvo-link__icon--before"
+                                  role="img" aria-label="Back">
+                                  </span>
+                                  ${msg("backToLogin")}
                                 </a>
+                              </span>
                             </div>
+                          </div>
                         </div>
                     </div>
                 </form>

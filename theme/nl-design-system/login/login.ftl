@@ -9,7 +9,7 @@
               <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
               <div class="rvo-layout-column rvo-layout-gap--md">
                 <div class="utrecht-form-fieldset rvo-form-fieldset">
-                  <fieldset class="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset">
+                  <fieldset class="utrecht-form-fieldset__fieldset utrecht-form-fieldset--html-fieldset rvo-layout-gap--md">
 
                     <#if !usernameHidden??>
                       <div role="group" aria-labelledby="username-label" class="utrecht-form-field utrecht-form-field--text rvo-form-field">
