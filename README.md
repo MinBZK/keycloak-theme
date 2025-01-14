@@ -24,6 +24,7 @@ Je kan de componenten die gebruikt worden selecteren per realm via het admin pan
 
 ## Publiceren
 
+
 Om deze keycloak theme te bouwen kan men de volgende commandos uitvoeren. De commandos gaan er vanuit dat je [node](https://nodejs.org/en/download) en [java](https://www.azul.com/downloads/?package=jdk#zulu) geinstalleerd hebt.
 
 ```shell
