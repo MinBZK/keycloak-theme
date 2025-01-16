@@ -114,14 +114,6 @@
               <li class="rvo-topnav__item rvo-topnav__item--align-right">
             </#if>
               <div class="rvo-link rvo-topnav__link rvo-link--logoblauw">
-                <span
-                  class="utrecht-icon rvo-icon rvo-icon-toegangspas rvo-icon--lg rvo-icon--wit"
-                  role="img"
-                  aria-label="User"
-                ></span>
-                <#if (realm.displayName?has_content)>
-                  ${realm.displayName}
-                </#if>
               </>
             </li>
           </ul>
@@ -132,6 +124,7 @@
       <div class="rvo-layout-column rvo-layout-gap--xl">
         <main class="rvo-max-width-layout rvo-max-width-layout--sm rvo-max-width-layout-inline-padding--md">
           <div class="rvo-form">
+            <div class="rvo-layout-column rvo-layout-gap--md">
             <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
                 <#if displayRequiredFields>
                   <div class="rvo-alert rvo-alert--info rvo-alert--padding-md">
@@ -222,6 +215,7 @@
             <#if displayInfo>
               <#nested "info">
             </#if>
+            </div>
           </div>
         </main>
       </div>
