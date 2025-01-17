@@ -11,10 +11,3 @@ updates:
       allnpm:
         patterns:
           - "*"
-  - package-ecosystem: "devcontainers"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "08:00"
-      timezone: "Europe/Amsterdam"
