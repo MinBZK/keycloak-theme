@@ -18,28 +18,24 @@
                                         <label for="username"
                                                id="username-label"
                                                class="rvo-label"><#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if></label>
+                                        <#if messagesPerField.existsError('username')>
+                                            <div class="utrecht-form-field-description utrecht-form-field-description--invalid rvo-form-feedback rvo-form-feedback--error">
+                                            <span
+                                                class="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--md rvo-status-icon-foutmelding rvo-status-icon-foutmelding"
+                                                role="img"
+                                                aria-label="Foutmelding"
+                                            ></span>
+                                                ${kcSanitize(messagesPerField.get('username'))?no_esc}
+                                            </div>
+                                        </#if>
                                     </div>
 
                                     <input tabindex="1" id="username"
                                            aria-invalid="<#if messagesPerField.existsError('username')>true</#if>"
-                                           class="utrecht-textbox utrecht-textbox--html-input utrecht-textbox--lg" name="username"
+                                           class="utrecht-textbox utrecht-textbox--html-input utrecht-textbox--lg"
+                                           name="username"
                                            value="${(login.username!'')}"
                                            type="text" autofocus autocomplete="off" dir="auto"/>
-
-                                    <#if messagesPerField.existsError('username')>
-                                        <div class="rvo-alert rvo-alert--error rvo-alert--padding-md">
-                                            <span
-                                                class="utrecht-icon rvo-icon rvo-icon-foutmelding rvo-icon--xl rvo-status-icon-foutmelding"
-                                                role="img"
-                                                aria-label="Info"
-                                            ></span>
-                                            <div class="rvo-alert-text">
-                                                <span id="input-error-username" aria-live="polite">
-                                                    ${kcSanitize(messagesPerField.get('username'))?no_esc}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </#if>
                                 </div>
                             </#if>
 
@@ -83,22 +79,24 @@
     <#elseif section = "socialProviders" >
         <#if realm.password && social?? && social.providers?has_content>
             <div id="kc-social-providers" class="${properties.kcFormSocialAccountSectionClass!}">
-                <hr/>
-                <h4>${msg("identity-provider-login-label")}</h4>
+                <hr class="rvo-hr"/>
+                <h4 class="utrecht-heading-4">${msg("identity-provider-login-label")}</h4>
 
-                <ul class="${properties.kcFormSocialAccountListClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountListGridClass!}</#if>">
-                    <#list social.providers as p>
-                        <a id="social-${p.alias}" class="${properties.kcFormSocialAccountListButtonClass!} <#if social.providers?size gt 3>${properties.kcFormSocialAccountGridItem!}</#if>"
-                                type="button" href="${p.loginUrl}">
-                            <#if p.iconClasses?has_content>
-                                <i class="${properties.kcCommonLogoIdP!} ${p.iconClasses!}" aria-hidden="true"></i>
-                                <span class="${properties.kcFormSocialAccountNameClass!} kc-social-icon-text">${p.displayName!}</span>
+                <div class="rvo-layout-column rvo-layout-align-items-center rvo-layout-gap--md">
+                    <#list social.providers as provider>
+                        <a id="social-${provider.alias}"
+                           class="utrecht-button utrecht-button--secondary-action utrecht-button--rvo-full-width rvo-button-group__align-right utrecht-button--rvo-md rvo-link--no-underline"
+                           type="button" href="${provider.loginUrl}">
+                            <#if provider.iconClasses?has_content>
+                                <span class="utrecht-icon rvo-margin-inline-end--2xs rvo-icon rvo-icon--md rvo-icon--hemelblauw ${properties.kcCommonLogoIdP!} ${provider.iconClasses!}" role="img"></span>
+                                <span
+                                    class="${properties.kcFormSocialAccountNameClass!} kc-social-icon-text">${provider.displayName!}</span>
                             <#else>
-                                <span class="${properties.kcFormSocialAccountNameClass!}">${p.displayName!}</span>
+                                <span class="${properties.kcFormSocialAccountNameClass!}">${provider.displayName!}</span>
                             </#if>
                         </a>
                     </#list>
-                </ul>
+                </div>
             </div>
         </#if>
     </#if>
