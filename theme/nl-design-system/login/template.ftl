@@ -189,6 +189,7 @@
               </div>
             </#if>
 
+            <#nested "socialProviders">
             <#nested "form">
 
             <#if auth?has_content && auth.showTryAnotherWayLink()>
@@ -209,8 +210,6 @@
                 </div>
               </form>
             </#if>
-
-            <#nested "socialProviders">
 
             <#if displayInfo>
               <#nested "info">
