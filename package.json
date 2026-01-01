@@ -9,10 +9,10 @@
   "author": "",
   "devDependencies": {
     "@nl-rvo/assets": "1.0.0-alpha.360",
-    "@nl-rvo/component-library-css": "4.14.0",
+    "@nl-rvo/component-library-css": "4.15.1",
     "@nl-rvo/design-tokens": "2.0.1",
     "copy-webpack-plugin": "^13.0.1",
-    "webpack": "^5.103.0",
+    "webpack": "^5.104.1",
     "webpack-cli": "^6.0.1"
   }
 }
