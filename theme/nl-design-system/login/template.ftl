@@ -83,13 +83,13 @@
   </header>
 
   <div class="rvo-layout-column rvo-layout-gap--xl">
-    <div class="rvo-topnav__background rvo-topnav__background--horizontal-rule">
-        <nav class="rvo-topnav rvo-topnav--lg">
-          <ul class="rvo-topnav__list">
+    <div class="rvo-menubar__background rvo-menubar__background--horizontal-rule">
+        <nav class="rvo-menubar rvo-menubar--lg">
+          <ul class="rvo-menubar__list">
             <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
-              <li class="rvo-topnav__item rvo-topnav__item--align-right">
+              <li class="rvo-menubar__item rvo-menubar__item--align-right">
                 <div class="language-dropdown">
-                  <a class="rvo-link rvo-topnav__link rvo-link--logoblauw" href="#">
+                  <a class="rvo-link rvo-menubar__link rvo-link--logoblauw" href="#">
                     <span
                       class="utrecht-icon rvo-icon rvo-icon-wereldbol rvo-icon--md rvo-icon--wit"
                       role="img"
@@ -109,11 +109,11 @@
             </#if>
 
             <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
-              <li class="rvo-topnav__item">
+              <li class="rvo-menubar__item">
             <#else>
-              <li class="rvo-topnav__item rvo-topnav__item--align-right">
+              <li class="rvo-menubar__item rvo-menubar__item--align-right">
             </#if>
-              <div class="rvo-link rvo-topnav__link rvo-link--logoblauw">
+              <div class="rvo-link rvo-menubar__link rvo-link--logoblauw">
               </>
             </li>
           </ul>
@@ -128,13 +128,13 @@
             <#if !(auth?has_content && auth.showUsername() && !auth.showResetCredentials())>
                 <#if displayRequiredFields>
                   <div class="rvo-alert rvo-alert--info rvo-alert--padding-md">
-                    <span
-                      class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
-                      role="img"
-                      aria-label="Info"
-                    ></span>
-                    <div class="rvo-alert-text">
-                      <div>
+                    <div class="rvo-alert__container">
+                      <span
+                        class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
+                        role="img"
+                        aria-label="Info"
+                      ></span>
+                      <div class="rvo-alert-text">
                         <div>
                           <span class="required">*</span> ${msg("requiredFields")}
                         </div>
@@ -148,13 +148,13 @@
             <#else>
                 <#if displayRequiredFields>
                   <div class="rvo-alert rvo-alert--info rvo-alert--padding-md">
-                    <span
-                      class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
-                      role="img"
-                      aria-label="Info"
-                    ></span>
-                    <div class="rvo-alert-text">
-                      <div>
+                    <div class="rvo-alert__container">
+                      <span
+                        class="utrecht-icon rvo-icon rvo-icon-info rvo-icon--xl rvo-status-icon-info"
+                        role="img"
+                        aria-label="Info"
+                      ></span>
+                      <div class="rvo-alert-text">
                         <div>
                           <span class="required">*</span> ${msg("requiredFields")}
                         </div>
@@ -178,13 +178,15 @@
             <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
 
               <div class="rvo-alert rvo-alert--${message.type} rvo-alert--padding-md">
-                <span
-                  class="utrecht-icon rvo-icon  rvo-icon--xl <#if message.type = 'success'>rvo-icon-bevestiging rvo-status-icon-bevestiging<#elseif  message.type = 'warning'>rvo-icon-waarschuwing rvo-status-icon-waarschuwing<#elseif  message.type = 'error'>rvo-icon-foutmelding rvo-status-icon-foutmelding<#elseif  message.type = 'info'>rvo-icon-info rvo-status-icon-info</#if>"
-                  role="img"
-                  aria-label="<#if message.type = 'success'>Bevestiging<#elseif  message.type = 'warning'>Waarschuwing<#elseif  message.type = 'error'>Foutmelding<#elseif  message.type = 'info'>Info</#if>"
-                ></span>
-                <div class="rvo-alert-text">
-                  <div>${kcSanitize(message.summary)?no_esc}</div>
+                <div class="rvo-alert__container">
+                  <span
+                    class="utrecht-icon rvo-icon  rvo-icon--xl <#if message.type = 'success'>rvo-icon-bevestiging rvo-status-icon-bevestiging<#elseif  message.type = 'warning'>rvo-icon-waarschuwing rvo-status-icon-waarschuwing<#elseif  message.type = 'error'>rvo-icon-foutmelding rvo-status-icon-foutmelding<#elseif  message.type = 'info'>rvo-icon-info rvo-status-icon-info</#if>"
+                    role="img"
+                    aria-label="<#if message.type = 'success'>Bevestiging<#elseif  message.type = 'warning'>Waarschuwing<#elseif  message.type = 'error'>Foutmelding<#elseif  message.type = 'info'>Info</#if>"
+                  ></span>
+                  <div class="rvo-alert-text">
+                    <div>${kcSanitize(message.summary)?no_esc}</div>
+                  </div>
                 </div>
               </div>
             </#if>
