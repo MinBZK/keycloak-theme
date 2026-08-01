@@ -12,7 +12,7 @@
     "@nl-rvo/component-library-css": "4.20.3",
     "@nl-rvo/design-tokens": "2.4.2",
     "copy-webpack-plugin": "^14.0.0",
-    "webpack": "^5.108.3",
-    "webpack-cli": "^7.1.0"
+    "webpack": "^5.109.2",
+    "webpack-cli": "^7.2.2"
   }
 }
